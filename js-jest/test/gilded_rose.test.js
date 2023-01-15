@@ -90,4 +90,14 @@ describe("Aged Brie tests", function() {
   });
 })
 
+describe("Sulfuras tests", function() {
+  it("Sulfuras with 0 sellIn 80 quality should have quality 80", function() {
+    const sellIn = 0
+    const quality = 80
+    const gildedRose = new Shop([new Item('Sulfuras, Hand of Ragnaros', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(80);
+  });
+})
+
 
