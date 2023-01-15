@@ -31,20 +31,20 @@ describe("Vest tests", function() {
   
     expect(items[0].sellIn).toBe(9);
   });
-  it("Aged Brie with 0 sellIn 0 quality should have quality 2", function() {
+  it("Vest with 0 sellIn 10 quality should have quality 8", function() {
+    const sellIn = 0
+    const quality = 10
+    const gildedRose = new Shop([new Item('+5 Dexterity Vest', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    
+    expect(items[0].quality).toBe(8);
+  });
+  it("Vest with 0 sellIn 0 quality should have quality 0", function() {
     const sellIn = 0
     const quality = 0
     const gildedRose = new Shop([new Item('+5 Dexterity Vest', sellIn, quality)]);
     const items = gildedRose.updateQuality();
-    
-    expect(items[0].quality).toBe(2);
-  });
-  it("Aged Brie with -10 sellIn 10 quality should have quality 12", function() {
-    const sellIn = -10
-    const quality = 10
-    const gildedRose = new Shop([new Item('+5 Dexterity Vest', sellIn, quality)]);
-    const items = gildedRose.updateQuality();
-    expect(items[0].quality).toBe(12);
+    expect(items[0].quality).toBe(0);
   });
 })
 
@@ -80,6 +80,13 @@ describe("Aged Brie tests", function() {
     const gildedRose = new Shop([new Item('Aged Brie', sellIn, quality)]);
     const items = gildedRose.updateQuality();
     expect(items[0].quality).toBe(12);
+  });
+  it("Aged Brie with -10 sellIn 50 quality should have quality 50", function() {
+    const sellIn = -10
+    const quality = 50
+    const gildedRose = new Shop([new Item('Aged Brie', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(50);
   });
 })
 
