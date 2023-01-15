@@ -100,4 +100,35 @@ describe("Sulfuras tests", function() {
   });
 })
 
+describe("Backstage pass tests", function() {
+  it("Pass with 12 sellIn 10 quality should have quality 11", function() {
+    const sellIn = 12
+    const quality = 10
+    const gildedRose = new Shop([new Item('Backstage passes to a TAFKAL80ETC concert', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(11);
+  });
+  it("Pass with 10 sellIn 10 quality should have quality 12", function() {
+    const sellIn = 10
+    const quality = 10
+    const gildedRose = new Shop([new Item('Backstage passes to a TAFKAL80ETC concert', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(12);
+  });
+  it("Pass with 5 sellIn 10 quality should have quality 13", function() {
+    const sellIn = 5
+    const quality = 10
+    const gildedRose = new Shop([new Item('Backstage passes to a TAFKAL80ETC concert', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(13);
+  });
+  it("Pass with 0 sellIn 10 quality should have quality 0", function() {
+    const sellIn = 0
+    const quality = 10
+    const gildedRose = new Shop([new Item('Backstage passes to a TAFKAL80ETC concert', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(0);
+  });
+})
+
 
