@@ -131,4 +131,36 @@ describe("Backstage pass tests", function() {
   });
 })
 
-
+describe("Conjured items tests", function() {
+  it("Conjured with 10 sellIn 10 quality should have quality 8", function() {
+    const sellIn = 10
+    const quality = 10
+    const gildedRose = new Shop([new Item('Conjured Mana Cake', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+  
+    expect(items[0].quality).toBe(8);
+  });
+  it("Conjured with 10 sellIn 10 quality should have sellIn 9", function() {
+    const sellIn = 10
+    const quality = 10
+    const gildedRose = new Shop([new Item('Conjured Mana Cake', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+  
+    expect(items[0].sellIn).toBe(9);
+  });
+  it("Conjured with 0 sellIn 10 quality should have quality 6", function() {
+    const sellIn = 0
+    const quality = 10
+    const gildedRose = new Shop([new Item('Conjured Mana Cake', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    
+    expect(items[0].quality).toBe(6);
+  });
+  it("Conjured with 0 sellIn 0 quality should have quality 0", function() {
+    const sellIn = 0
+    const quality = 0
+    const gildedRose = new Shop([new Item('Conjured Mana Cake', sellIn, quality)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(0);
+  });
+})
