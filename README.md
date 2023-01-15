@@ -1,5 +1,5 @@
 ## Test Coverage
-![test coverage](./js-jest/coverage/Screenshot 2023-01-15 at 10.24.53 PM.png)
+![test coverage](https://github.com/berwyntan/gilded-rose-js-jest/blob/main/js-jest/coverage/Screenshot%202023-01-15%20at%2010.24.53%20PM.png)
 
 ## Original README
 
