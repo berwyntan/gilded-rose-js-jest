@@ -1,5 +1,5 @@
 ## Test Coverage
-!(./js-jest/coverage/Screenshot 2023-01-15 at 10.24.53 PM.png)
+![test coverage](./js-jest/coverage/Screenshot 2023-01-15 at 10.24.53 PM.png)
 
 ## Original README
 
