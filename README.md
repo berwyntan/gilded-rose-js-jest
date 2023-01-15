@@ -1,3 +1,8 @@
+## Test Coverage
+!(./js-jest/coverage/Screenshot 2023-01-15 at 10.24.53 PM.png)
+
+## Original README
+
 # Gilded Rose Refactoring Kata
 
 This Kata was originally created by Terry Hughes (http://twitter.com/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose). See also [Bobby Johnson's description of the kata](https://iamnotmyself.com/refactor-this-the-gilded-rose-kata/).
